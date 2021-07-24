@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                     if (value.isEmpty) {
                       return "Password Cannot be empty";
                     } else if (value.length < 6) {
-                      return "Password lrngth should be atlast six";
+                      return "Password length should be at last 6";
                     }
                     return null;
                   },
@@ -84,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                   color: Colors.deepPurple,
                   borderRadius: BorderRadius.circular(changeButton ? 50 : 8),
                   child: InkWell(
-                    onTap: () async {},
+                    onTap: () => moveToHome(context) ,
                     child: AnimatedContainer(
                       duration: Duration(seconds: 1),
                       width: changeButton ? 50 : 150,
@@ -106,14 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                /*ElevatedButton(
-                  onPressed: () {
-                    //print("Button clicked");
-                    Navigator.pushNamed(context, MyRoutes.homeRoute);
-                  },
-                  child: Text("Login"),
-                  style: TextButton.styleFrom(minimumSize: Size(120, 40)),
-                )*/
+
               ],
             ),
           ),
